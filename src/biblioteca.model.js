@@ -25,7 +25,7 @@ function criarLivro(nome, autor, anoPublicacao, categoria) {
     return novoLivro;
 }
 
-function listarLivroTodos() {
+function buscarTodosOsLivros() {
     return livros;
 }
 
@@ -46,7 +46,7 @@ function buscarLivroPorCategoria(categoria) {
 
 module.exports = {
     criarLivro,
-    listarLivroTodos,
+    buscarTodosOsLivros,
     buscarLivroPorNome,
     buscarLivroPorAutor,
     buscarLivroPorCategoria

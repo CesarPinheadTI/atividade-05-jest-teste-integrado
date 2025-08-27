@@ -30,12 +30,20 @@ test('Verificar se o busca pela categoria é obrigatório', () => {
 
 // restante da funcao
 test('Verificar se esta criando e buscando', () => {
-    const result = bibliotecaService.criarLivro('nome','autor', 2020, 'categoria');
+    bibliotecaService.criarLivro('nome','autor', 2020, 'categoria');
     const result2 = bibliotecaService.buscarLivroPorNome('nome');
     const result3 = bibliotecaService.buscarLivroPorAutor('autor');
     const result4 = bibliotecaService.buscarLivroPorCategoria('categoria');
-    expect(result.nome).toBe('nome');
+    const result5 = bibliotecaService.listarLivros();
+    expect(result5[0].nome).toBe('nome');
     expect(result2.nome).toBe('nome');
     expect(result3.autor).toBe('autor');
     expect(result4.categoria).toBe('categoria');
+});
+
+// restante da funcao
+test('Verificar se esta criando e buscando', () => {
+    bibliotecaService.criarLivro('nome','autor', 2020,);
+    const result = bibliotecaService.buscarLivroPorCategoria('GERAL');
+    expect(result.categoria).toBe('GERAL');
 });
